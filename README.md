@@ -1,7 +1,20 @@
-# M82_Simulation_in_Athena
+## M82_Simulation_in_Athena++
+### Introduction
 This code is written by Wang Tianrui. The main purpose of this code is to simulate the effect of different stellar feedback in M82 dwarf galaxy and to reproduce the outflow structure seen in observation.
-The three main code we use are starburst99(for the purpose of generating stellar wind table), GRACKLE(for radiative cooling and heating), Athena++(hydro dynamics solver)
-The three main feedback process is radiation, stellar wind and supernova.
+
+### Features
+In our study we present a new M82 mass model including
 In our code star formation and the evolution of each individual star cluster are carefully resolved, which requires a particle solver to be implemented to Athena++, currently we used our own particle solver built upon user defined meshblock data and user mpi communication.
-At this stage most of the development has been done, we are currently preparing the article^_^.
-==========2023/2/27==========
+
+It will not be possible for us to simulate anything without helping hands, we used different codes to suit the need for simulation. The three major codes we use are
++ [Athena++](https://github.com/PrincetonUniversity/athena-public-version/wiki) main hydro dynamics solver
++ [Starburst99](https://www.stsci.edu/science/starburst99/docs/default.htm) for the purpose of generating stellar wind table
++ [GRACKLE](https://grackle.readthedocs.io/en/latest/) for radiative cooling and heating
+
+The three main feedback processes included are
++ radiation, including radiation pressure as a momentum source and radiation heating as a heating term
++ stellar wind
++ supernova
+
+### Current Progress
+At this stage most of the development has been done, we are currently analysing data, including trying to reproduce X-ray image from hydrodynamics data and so much more. The article is under preparation and will be published soon in this year^_^
